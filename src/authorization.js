@@ -16,7 +16,7 @@ const Authorization = (allowedRoles) => (WrappedComponent) =>
     }
 
     render() {
-      const { role } = this.state.user.role;
+      const { role } = this.state.user;
       if (allowedRoles.includes(role)) {
         return <WrappedComponent {...this.props} />
       } else {
